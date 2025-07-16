@@ -53,6 +53,13 @@ int main(){
 				scanf("%d",&el);
 				push(el);
 				break;
+			case 2: printf("%d popped from the stack",pop());
+				break;
+			case 3: peek();
+				break;
+			case 4: display();break;
+			default: printf("Error: Invalid Choice!");break;
 		}
 	}
+	return 0;
 }
