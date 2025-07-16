@@ -19,6 +19,7 @@ int pop(){
 	else{
 		return stack[top--];
 	}
+	return;
 }
 
 void peek(){
