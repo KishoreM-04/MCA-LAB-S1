@@ -33,11 +33,4 @@ void subtract(){
     }
 }
 
-void multiply(){
-    int i,j,k;
-    for(i=0;i<row;i++){
-        for(j=0;j<col;j++){
-            scanf("%d",m1[i][j]);
-        }
-    }
-}
+
