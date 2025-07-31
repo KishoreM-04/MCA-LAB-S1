@@ -27,7 +27,7 @@ void peek(){
 			printf("Error: Stack Empty");
 	}
 	else{
-		printf("%d",stack[top]);
+		printf("Element at top: %d",stack[top]);
 	}
 }
 
