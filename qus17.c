@@ -7,10 +7,22 @@ int count=0;
 int top=-1;
 int top_p=-1;
 void display_postfix(){
-	int i,j=top_p;
-	for(i=0;i<=top_p;i++){
-		if(postfix[])
-		prefix[i]
+	int i=top_p,j,temp;
+	//Reversing the expression
+//	while (j < i) {
+////		if(infix[j]=='('){
+////			infix[j]=')';
+////		}
+////		else if(infix[j]==')'){
+////			infix[j]='(';
+////		}
+//        temp = postfix[j];
+//        postfix[j] = postfix[i];
+//        postfix[i] = temp;
+//        j++;
+//        i--;
+//    }
+	for(i=top_p;i>=0;i--){
 		printf("%c ",postfix[i]);
 	}
 }
@@ -66,7 +78,7 @@ push(op);
 }
 
 void read(){
-	int i=0,j;
+	int i=0,j,temp;
 	printf("Enter an infix expression: ");
 	scanf("%s",infix);
 	while(infix[i]!='\0')
@@ -83,7 +95,7 @@ void read(){
 			infix[j]='(';
 		}
         temp = infix[j];
-        infix[j] = str[i];
+        infix[j] = infix[i];
         infix[i] = temp;
         j++;
         i--;
