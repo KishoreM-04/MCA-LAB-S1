@@ -1,3 +1,4 @@
+//28. Multiply two polynomials
 //27. Subtract two polynomials
 #include<stdio.h>
 int p1[20]={0},p2[20]={0},res[20]={0};
@@ -49,16 +50,18 @@ void read(){
 }
 
 
-void sub_poly(){
-	int i;
+void mul_poly(){
+	int i,j;
 	for(i=0;i<20;i++)	{
-		res[i]=p2[i]-p1[i];
+		for(j=0;j<20;j++){
+			res[i+j]+=p1[i]*p2[j];
+		}
 	}
-	printf("\nPolynomial-2 - Polynomial-1");
+	printf("\nPolynomial-1 + Polynomial-2");
 	display(res);
 }
 
 int main(){
 	read();
-	sub_poly();	
+	mul_poly();	
 }
