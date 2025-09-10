@@ -10,11 +10,19 @@ void read(){
 		top++;
 	}
 }
+char pop(){
+	if(top==-1){
+		return;
+	}
+	else{
+		return stack[top--];
+	}
+}
 void reverse(){
 	int i;
 	printf("Reverse of %s: ",stack);
-	for(i=top-1;i>=0;i--){
-		printf("%c",stack[i]);
+	while(top!=-1){
+		printf("%c",pop());
 	}
 }
 int main(){
